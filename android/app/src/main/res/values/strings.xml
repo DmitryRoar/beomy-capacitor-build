@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">frontend-master</string>
+    <string name="title_activity_main">frontend-master</string>
+    <string name="package_name">com.dnetnorf.wwww.app</string>
+    <string name="custom_url_scheme">com.dnetnorf.wwww.app</string>
+</resources>

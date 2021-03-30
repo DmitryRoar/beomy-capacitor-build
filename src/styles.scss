@@ -1,0 +1,163 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$components-for-project-primary: mat-palette($mat-primary);
+$components-for-project-accent: mat-palette($mat-blue);
+$components-for-project-warn: mat-palette($mat-red);
+$components-for-project-theme: mat-light-theme((
+  color: (
+    primary: $components-for-project-primary,
+    accent: $components-for-project-accent,
+    warn: $components-for-project-warn
+  )
+));
+
+@include angular-material-theme($components-for-project-theme);
+
+@import "assets/styles/index";
+@import "assets/styles/fonts";
+
+* {
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background: #189f9a;
+}
+
+.container-right {
+  display: flex;
+  justify-content: flex-end;
+  padding: $drawer-padding;
+  text-align: right;
+}
+
+.text__headline {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text__content {
+  font-size: 15px;
+}
+
+.avatar {
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: $card-student-content-img-width;
+    height: $card-student-content-img-height;
+  }
+}
+
+.mat-flat-button, .mat-button-disabled, .mat-button {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+}
+
+mat-checkbox .mat-checkbox-inner-container {
+  width: $checkbox-width;
+  height: $checkbox-height;
+}
+
+.mat-checkbox .mat-checkbox-frame {
+  border: 2px solid $gray-color;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.input {
+  display: inline-flex;
+  flex-direction: column;
+
+  input, label, mat-label {
+    text-align: right;
+  }
+
+  label {
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+
+  input {
+    padding: 15px 18px;
+    font-size: 18px;
+    color: #B1BAC9;
+    background: none;
+  }
+
+  div {
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 0;
+
+    img {
+      margin-left: 22px;
+    }
+  }
+}
+
+.card-blue {
+  color: #fff;
+  display:  flex;
+  background: $blue-gradient;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+
+  .action {
+    a {
+      color: #fff;
+      background: $green-color;
+      padding: 4px 25px;
+      font-size: 12px;
+      border-radius: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+
+    img {
+      margin-left: 13px;
+    }
+
+    &.column {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .date {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+
+      .mat-icon  {
+        font-size: 11px;
+        height: auto;
+        width: auto;
+        margin-right: 5px;
+      }
+    }
+
+    &.homework-status__content {
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+}

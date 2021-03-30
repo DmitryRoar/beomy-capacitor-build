@@ -1,0 +1,72 @@
+<div class="wrap" *ngIf="card; else empty">
+  <div class="header" *ngIf="card.lastLesson">
+    <div class="container container-header">
+      <div class="header__time">
+        <img src="assets/img/card/clock.svg" alt="">
+        <h2 class="text__headline">{{card.lastLesson}}</h2>
+      </div>
+      <div class="header__text text__content">
+        Before the lesson
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container container-content">
+      <div class="wrap-desc">
+        <div class="content-desc">
+          <div class="content-desc__name">
+            <p>{{card.name}}</p>
+          </div>
+          <div class="content-desc__subject">
+            Subject:
+            <span
+              class="subject"
+              [ngClass]="{
+              'subject-primary': card.color === 'primary',
+              'subject-accent': card.color === 'accent',
+              'subject-warn': card.color === 'warn'
+            }"
+            >
+            {{card.subject}}
+          </span>
+          </div>
+
+          <hr>
+
+          <div class="footer">
+              <div class="footer__text">
+                <p>Next Lesson</p>
+              </div>
+              <div class="icon date">
+                <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+                {{card.nextLesson.date}}
+              </div>
+              <div class="icon time">
+                <mat-icon matDatepickerToggleIcon>query_builder</mat-icon>
+                {{card.nextLesson.time}}
+              </div>
+            </div>
+        </div>
+
+        <div class="avatar" *ngIf="card.img">
+          <img [src]="card.img" alt="student-img">
+        </div>
+
+        <div class="dialog">
+          <button
+            mat-button
+            color="accent"
+          >
+            <img src="assets/img/dialog.svg" alt="dialog">
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<ng-template #empty>
+  <p>empty card</p>
+</ng-template>

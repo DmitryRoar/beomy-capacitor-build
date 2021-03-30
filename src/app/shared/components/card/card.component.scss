@@ -1,0 +1,160 @@
+@import "src/assets/styles/var";
+
+.wrap {
+  width: 345px;
+  border-radius: $border-radius;
+  background: $card-student-content-background;
+  box-shadow: 5px 5px 30px rgba(65, 98, 169, 0.2);
+}
+
+.content-wrap {
+  padding: 0 $card-student-content-padding-horizontal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $card-student-content-header-height;
+}
+
+.header {
+  overflow-y: hidden;
+  border-radius: $border-radius $border-radius 0 0;
+  background: $blue-gradient;
+  color: #fff;
+
+  &__text {
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  &__time {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+
+    img {
+      left: 0;
+      position: absolute;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  padding: 14px $card-student-content-padding-horizontal;
+  align-items: center;
+
+  &-header {
+    justify-content: space-between;
+  }
+
+  &-content {
+    padding: 14px $card-student-content-padding-horizontal 14px $card-student-content-padding-horizontal;
+    justify-content: flex-end;
+  }
+
+  &-footer {
+    justify-content: space-between;
+  }
+}
+
+.wrap-desc {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.content-desc {
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+  margin-right: 22px;
+  width: 66%;
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__subject {
+    font-size: 14px;
+
+    .subject {
+      font-weight: 700;
+      text-transform: capitalize;
+
+      &-accent {
+        color: $accent-color;
+      }
+
+      &-warn {
+        color: red;
+      }
+
+      &-primary {
+        color: yellow
+      }
+    }
+  }
+
+  hr {
+    width: 100%;
+    height: 1px;
+    background: $inactive-color;
+    margin-top: 13px;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .mat-icon {
+    width: $card-student-content-icon-size;
+    height: $card-student-content-icon-size;
+    font-size: $card-student-content-icon-size;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+      background: $blue-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-right: 4px;
+    }
+  }
+}
+
+.dialog {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+
+  .mat-button {
+    background: $inactive-color;
+    padding: 12px 11px;
+    min-height: 42px;
+    min-width: 42px;
+    height: 42px;
+    width: 42px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}

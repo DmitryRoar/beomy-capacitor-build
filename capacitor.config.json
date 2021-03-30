@@ -1,0 +1,8 @@
+{
+  "appId": "com.dnetnorf.wwww.app",
+  "appName": "frontend-master",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/frontend",
+  "cordova": {}
+}
